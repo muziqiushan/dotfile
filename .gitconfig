@@ -1,0 +1,13 @@
+[user]
+    # name = muziqiushan
+    # email = muziqiushan@gmail.com
+    # name = liyue06
+    # email = liyue06@baidu.com
+    name = yue
+    email = 997536713@qq.com
+[credential]
+    helper = cache --timeout 999999999
+[http]
+    sslVerify = false
+[alias]
+        lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
