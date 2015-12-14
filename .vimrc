@@ -65,20 +65,20 @@ filetype plugin indent on
 
 "autocmd filetype vim setl iskeyword+=-,.,$,:
 " autocmd filetype less let &l:filetype='less'
-autocmd filetype smarty,tpl let &l:filetype='html'
-" convert tpl file's filetype to html
-autocmd BufRead,BufNewFile *.less set filetype=less
-autocmd filetype smarty,html,css,javascript setl iskeyword+=-
-" autocmd filetype php setl iskeyword+=$
-autocmd filetype * setl fo=tq
+autocmd FileType smarty,tpl let &l:FileType='html'
+" convert tpl file's FileType to html
+autocmd BufRead,BufNewFile *.less set FileType=less
+autocmd FileType smarty,html,css,javascript setl iskeyword+=-
+" autocmd FileType php setl iskeyword+=$
+autocmd FileType * setl fo=tq
 " auto set vimdict
-autocmd filetype * let &l:dict=s:vimfile.'/bundle/vim-dict/dict/'.&ft.'.dict'
+autocmd FileType * let &l:dict=s:vimfile.'/bundle/vim-dict/dict/'.&ft.'.dict'
 " var_dump/debug()
-autocmd filetype php,smarty  nnoremap <buffer> <C-x> :call Debug("var_dump(",");","$,-,>,.")<CR> 
-autocmd filetype php,smarty nnoremap <buffer> <C-d> :call Debug("var_dump(",");exit;","$,-,>,.")<CR> 
-autocmd filetype php,smarty nnoremap <buffer> <C-e> :call Debug("echo json_encode(",");exit;","$,-,>,.")<CR>
-autocmd filetype javascript nnoremap <buffer> <C-d> :call Debug("console.log(",");","-,.,[,]")<CR>
-autocmd filetype cpp nnoremap <buffer> <C-d> :call Debug("cout<<","<<endl;")<CR>
+autocmd FileType php,smarty  nnoremap <buffer> <C-x> :call Debug("var_dump(",");","$,-,>,.")<CR> 
+autocmd FileType php,smarty nnoremap <buffer> <C-d> :call Debug("var_dump(",");exit;","$,-,>,.")<CR> 
+autocmd FileType php,smarty nnoremap <buffer> <C-e> :call Debug("echo json_encode(",");exit;","$,-,>,.")<CR>
+autocmd FileType javascript nnoremap <buffer> <C-d> :call Debug("console.log(",");","-,.,[,]")<CR>
+autocmd FileType cpp nnoremap <buffer> <C-d> :call Debug("cout<<","<<endl;")<CR>
 nmap <LeftMouse> <LeftMouse>i
 " vmap <LeftRelease> <LeftRelease>c
 " map <LeftDrag> v<LeftDrag>
@@ -263,7 +263,7 @@ let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_loc_list_height = 5
-autocmd filetype tpl,html let b:match_words = '<:>,{:},(:),[:]'.
+autocmd FileType tpl,html let b:match_words = '<:>,{:},(:),[:]'.
             \ '<\@<=[ou]l\>[^>]*\%(>\|$\):<\@<=li\>:<\@<=/[ou]l>,' .
             \ '<\@<=dl\>[^>]*\%(>\|$\):<\@<=d[td]\>:<\@<=/dl>,' .
             \ '<\@<=\([^/][^ \t>]*\)[^>]*\%(>\|$\):<\@<=/\1>,'  .
