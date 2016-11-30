@@ -1,5 +1,5 @@
 # dotfile
-all dotfile
+my private dotfile
 
 # usage
 > git clone https://github.com/muziqiushan/dotfile.git 
